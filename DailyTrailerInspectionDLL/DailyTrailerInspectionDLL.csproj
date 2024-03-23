@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{79843B7B-8088-4551-A01C-C6462C757045}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DailyTrailerInspectionDLL</RootNamespace>
+    <AssemblyName>DailyTrailerInspectionDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DailyTrailerInspectionClass.cs" />
+    <Compile Include="DailyTrailerInspectionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DailyTrailerInspectionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindDailyTrailerInspectionByDateMatchDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindDailyTrailerInspectionByDateMatchDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindDailyTrailerInspectionByDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindDailyTrailerInspectionByDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindDailyTrailerInspectionByEmployeeIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindDailyTrailerInspectionByEmployeeIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindDailyTrailerInspectionByTrailerIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindDailyTrailerInspectionByTrailerIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertDailyTrailerInspectionEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertDailyTrailerInspectionEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DailyTrailerInspectionDataSet.xsc">
+      <DependentUpon>DailyTrailerInspectionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DailyTrailerInspectionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DailyTrailerInspectionDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DailyTrailerInspectionDataSet.xss">
+      <DependentUpon>DailyTrailerInspectionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDailyTrailerInspectionByDateMatchDataSet.xsc">
+      <DependentUpon>FindDailyTrailerInspectionByDateMatchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDailyTrailerInspectionByDateMatchDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindDailyTrailerInspectionByDateMatchDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindDailyTrailerInspectionByDateMatchDataSet.xss">
+      <DependentUpon>FindDailyTrailerInspectionByDateMatchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDailyTrailerInspectionByDateRangeDataSet.xsc">
+      <DependentUpon>FindDailyTrailerInspectionByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDailyTrailerInspectionByDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindDailyTrailerInspectionByDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindDailyTrailerInspectionByDateRangeDataSet.xss">
+      <DependentUpon>FindDailyTrailerInspectionByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDailyTrailerInspectionByEmployeeIDDataSet.xsc">
+      <DependentUpon>FindDailyTrailerInspectionByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDailyTrailerInspectionByEmployeeIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindDailyTrailerInspectionByEmployeeIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindDailyTrailerInspectionByEmployeeIDDataSet.xss">
+      <DependentUpon>FindDailyTrailerInspectionByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDailyTrailerInspectionByTrailerIDDataSet.xsc">
+      <DependentUpon>FindDailyTrailerInspectionByTrailerIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDailyTrailerInspectionByTrailerIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindDailyTrailerInspectionByTrailerIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindDailyTrailerInspectionByTrailerIDDataSet.xss">
+      <DependentUpon>FindDailyTrailerInspectionByTrailerIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertDailyTrailerInspectionEntry.xsc">
+      <DependentUpon>InsertDailyTrailerInspectionEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertDailyTrailerInspectionEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertDailyTrailerInspectionEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertDailyTrailerInspectionEntry.xss">
+      <DependentUpon>InsertDailyTrailerInspectionEntry.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
